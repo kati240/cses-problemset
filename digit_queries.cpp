@@ -46,8 +46,12 @@ int main(){
             else{
                 position=0;
             }
-            long long int val=0;
-            val=pow(10,len_digits-1)+num;
+            long long int val=1;
+            long long int y=len_digits-1;
+            while(y--){
+                val=val*10;
+            }
+            val+=num;
             fn(val,position,len_digits);
         }  
     }
