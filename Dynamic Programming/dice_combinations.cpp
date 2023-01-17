@@ -10,22 +10,12 @@ int main(){
     }
     dp[0]=1;
     for(int j=1;j<=n;j++){
-    for(int i=1;i<=6;i++){
-        
+        for(int i=1;i<=6;i++){
             if(j-i>=0){
                 dp[j]+=dp[j-i]%1000000007;
             }
         }
     }
     cout<<dp[n]%1000000007;
-    // cout<<endl;
-    // for(int i=0;i<=n;i++){
-    //     cout<<dp[i]<<" ";
-    // }
-
-
-
-
-
     return 0;
 }
