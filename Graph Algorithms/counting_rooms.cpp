@@ -2,11 +2,8 @@
 #include<functional>
 using namespace std;
 
-
 int rows, columns;
 int vis[1010][1010];
-char grid[1010][1010];
-
 
 void dfs(int i,int j,int count){
         vis[i][j]=count;
@@ -25,7 +22,6 @@ void dfs(int i,int j,int count){
 int main(){
 
     cin>>rows>>columns;
-
     string s;
     getline(cin,s);
     for(int i=0;i<rows;i++){
@@ -39,14 +35,7 @@ int main(){
             }
         }
     }
-
-
-
     int count_rooms=0;
-
-
-
-    
     for(int i=0;i<rows;i++){
         for(int j=0;j<columns;j++){
             if(vis[i][j]==0){
@@ -54,10 +43,7 @@ int main(){
                 dfs(i,j,count_rooms);
             }
         }
-    
     }
     cout<<count_rooms;
-
-
     return 0;
 }
